@@ -1,0 +1,95 @@
+.logo-container {
+  animation: fadeInDown 1s ease-out;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crown {
+  font-size: 3rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.crown-jewel {
+  color: var(--gold);
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.8));
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  line-height: 1;
+}
+
+.royal {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 8px;
+  font-family: 'Georgia', serif;
+}
+
+.chai {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 12px;
+  font-family: 'Georgia', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.decorative-line {
+  margin-top: 0.5rem;
+  color: var(--gold);
+  font-size: 1.5rem;
+}
+
+.ornament {
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .crown {
+    font-size: 2rem;
+  }
+  
+  .decorative-line {
+    font-size: 1.2rem;
+  }
+}
